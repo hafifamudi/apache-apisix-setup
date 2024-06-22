@@ -1,0 +1,2 @@
+### Test admin routes
+GET http://127.0.0.1:9080/apisix/admin/ HTTP/1.1

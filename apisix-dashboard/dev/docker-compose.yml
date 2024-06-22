@@ -1,0 +1,15 @@
+version: "3"
+services:
+  apisix-dashboard:
+    image: apache/apisix-dashboard
+    restart: always
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./config/conf.yaml:/usr/local/apisix-dashboard/conf/conf.yaml
+    networks:
+      - apisix
+
+networks:
+  apisix:
+    driver: bridge
